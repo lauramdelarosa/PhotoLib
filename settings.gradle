@@ -1,3 +1,4 @@
 rootProject.name='PhotoLibExample'
 include ':app'
 include ':photolib'
+include ':prueba'
