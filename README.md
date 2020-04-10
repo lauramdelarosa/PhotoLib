@@ -15,7 +15,7 @@ Three easy steps:
     <CameraView
         ... />
 
-    <husaynhakeem.io.facedetector.FaceBoundsOverlay
+    <com.delarosa.photolib.FaceBoundsOverlay
         ... />
 
     // Any other views
@@ -31,14 +31,17 @@ private val faceDetector: FaceDetector by lazy {
 
 ...
 
-cameraView.addFrameProcessor {
-    faceDetector.process(Frame(
-            data = it.data,
-            rotation = it.rotation,
-            size = Size(it.size.width, it.size.height),
-            format = it.format,
-            isCameraFacingBack = cameraView.facing))
-}
+ cameraView.addFrameProcessor { camera ->
+            faceDetector.process(
+                Frame(
+                    data = camera.data,
+                    rotation = camera.rotation,
+                    size = Size(camera.size.width, camera.size.height),
+                    format = camera.format,
+                    isCameraFacingBack = cameraView.facing == Facing.BACK
+                )
+            )
+        }
 ```
 
 3. [Setup firebase](https://firebase.google.com/docs/android/setup) in your Android project

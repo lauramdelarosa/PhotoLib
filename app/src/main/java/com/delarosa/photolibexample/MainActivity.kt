@@ -20,17 +20,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupCamera() {
-            cameraView.addFrameProcessor { camera ->
-                faceDetector.process(
-                    Frame(
-                        data = camera.data,
-                        rotation = camera.rotation,
-                        size = Size(camera.size.width, camera.size.height),
-                        format = camera.format,
-                        isCameraFacingBack = cameraView.facing == Facing.BACK
-                    )
+        cameraView.addFrameProcessor { camera ->
+            faceDetector.process(
+                Frame(
+                    data = camera.data,
+                    rotation = camera.rotation,
+                    size = Size(camera.size.width, camera.size.height),
+                    format = camera.format,
+                    isCameraFacingBack = cameraView.facing == Facing.BACK
                 )
-
+            )
         }
 
         revertCameraButton?.setOnClickListener {
