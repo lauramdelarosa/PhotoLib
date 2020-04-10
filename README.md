@@ -65,4 +65,4 @@ allprojects {
 [![](https://jitpack.io/v/lauramdelarosa/PhotoLib.svg)](https://jitpack.io/#lauramdelarosa/PhotoLib)
 
 
-![](example.gif)
+![](example.gif.gif)
