@@ -4,8 +4,6 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
-
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 29
@@ -18,8 +16,13 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
         }
     }
 
@@ -30,7 +33,15 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // ML Kit
+    implementation('com.google.firebase:firebase-core:16.0.4') {
+        exclude group: 'com.android.support'
+    }
+    implementation('com.google.firebase:firebase-ml-vision:18.0.1') {
+        exclude group: 'com.android.support'
+    }
+}
+
+repositories {
+    mavenCentral()
 }

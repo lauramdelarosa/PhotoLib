@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "624043506208",
+    "firebase_url": "https://sepro-d1621.firebaseio.com",
+    "project_id": "sepro-d1621",
+    "storage_bucket": "sepro-d1621.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624043506208:android:5ff84e92a4acbcb5a05a45",
+        "android_client_info": {
+          "package_name": "com.delarosa.photolibexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624043506208-41tsb87gcm77qarklhb2ictetd1mnrki.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.delarosa.photolibexample",
+            "certificate_hash": "b2db8f50baa74c86de48e78c789490296b71b4dc"
+          }
+        },
+        {
+          "client_id": "624043506208-9hisrnhvirljfv2ps6kvhvjbfgu1gibh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD4pdnHoQy9-8RuuJCVpLMloesR7Py_HQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624043506208-9hisrnhvirljfv2ps6kvhvjbfgu1gibh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
